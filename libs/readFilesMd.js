@@ -5,7 +5,7 @@ const chalk = require('chalk') ;
 const readFiles = async (arrayPaths) => {
     if(arrayPaths.length != 0){
     let content = [];
-    arrayPaths.map(filePath => {
+    await arrayPaths.map(filePath => {
         const contentFile = fs.readFileSync(filePath, 'utf8')
         content.push({ contentFile, filePath })
     });

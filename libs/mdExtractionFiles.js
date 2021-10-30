@@ -12,7 +12,7 @@ const tofilterMd = (pathFromCli) => {
   if (!pathExt) {//si es falso entonces es carpeta
 
     let content = fs.readdirSync(pathFromCli);
-
+      
     content.forEach(file => {
       if (path.extname(file) == '.md' || path.extname(file) == '.markdown') {
         filesMD.push(pathFromCli + '\\' + file);//enviar path de files a array
@@ -22,7 +22,7 @@ const tofilterMd = (pathFromCli) => {
         let carpeta = (pathFromCli + '\\' + file);
         tofilterMd(carpeta);
       }
-
+    
     })
 
   } else {//es file

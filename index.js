@@ -18,5 +18,5 @@ console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  {
 //mdLinks
 startMdLinks.mdLinksAsync(pathFromCLi)
 .then(mdLinksData => console.log(mdLinksData))
-.catch((error=>console.log(error)))
+.catch((error=>console.log('Revise la sintaxis del comando') ))
 

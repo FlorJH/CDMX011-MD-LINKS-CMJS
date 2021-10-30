@@ -9,8 +9,9 @@ const mdLinksAsync =async (pathFromCli) => {
  if(pathFromCli){
     const convertedRoute=convertPath.absolutePath(pathFromCli);//convierte la path capturada en absoluta
     let arrayPathsMd = filterMd.tofilterMd(convertedRoute)//para filtrar solo files.md
-
-    let readFiles= readContetn.readFiles(arrayPathsMd).then(fileReading=> fileReading).catch(error=>error);
+    let readFiles= readContetn.readFiles(arrayPathsMd).then(fileReading=> fileReading).catch(error=>error)
+// let findUrls=;
+   //  let getUrlToAnalice
     //leerarchivo y se le pasa pathsMD
    //  console.log(readFiles)
      return readFiles
