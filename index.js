@@ -1,17 +1,9 @@
-const fs= require('fs');
 const chalk = require('chalk') ;
 const figlet = require('figlet') ;
-const convertPath=require('./libs/route');
+const startMdLinks=require('./libs/mdLinks.js')
 
 
-let pathConvertida=convertPath.absolutePath('index.js');//convierte la path capturada en absoluta
-
-
-console.log(pathConvertida)
-module.exports = () => {
-  // ...
-};
-
+const pathFromCLi=process.argv[2]
 
 console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  { 
   font: 'Ghost',
@@ -20,3 +12,14 @@ console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  {
   width: 100,
   whitespaceBreak : true 
 } ) ));
+
+
+
+//mdLinks
+startMdLinks.mdLinksAsync(pathFromCLi)
+.then(mdLinksData =>
+      console.log(mdLinksData))
+.catch((error=>
+  console.log(error)
+  ))
+
