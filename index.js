@@ -17,9 +17,6 @@ console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  {
 
 //mdLinks
 startMdLinks.mdLinksAsync(pathFromCLi)
-.then(mdLinksData =>
-      console.log(mdLinksData))
-.catch((error=>
-  console.log(error)
-  ))
+.then(mdLinksData => console.log(mdLinksData))
+.catch((error=>console.log(error)))
 

@@ -12,7 +12,7 @@ const mdLinksAsync =async (pathFromCli) => {
 
     let readFiles= readContetn.readFiles(arrayPathsMd).then(fileReading=> fileReading).catch(error=>error);
     //leerarchivo y se le pasa pathsMD
-   //  console.log(values)
+   //  console.log(readFiles)
      return readFiles
 
 

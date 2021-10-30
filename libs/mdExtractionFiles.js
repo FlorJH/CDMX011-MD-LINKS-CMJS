@@ -28,13 +28,12 @@ const tofilterMd = (pathFromCli) => {
   } else {//es file
 
     if (pathExt == '.md' || pathExt == '.markdown') {
-
       filesMD.push(pathFromCli);//enviar path de files a array
-
     }
   }
-
-  return filesMD
+    return filesMD
+  
+  
 }
 
 
