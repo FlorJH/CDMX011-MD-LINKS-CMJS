@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { get } = require('http');
 
-const findUrl= (contentFiles, pathFile)=>{
+const findUrl= (contentFiles)=>{
     let urlToAnalise = [];
     let marckdownUlr = /\[(.*)\]\((https?)\:\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?\)/gi;
     let urlTittle = /\[(.*)\]/gi;//obtener title

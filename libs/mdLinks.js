@@ -2,7 +2,8 @@ const convertPath=require('./route');
 const chalk = require('chalk') ;
 const filterMd = require('./mdExtractionFiles.js');
 const readContetn= require('./readFilesMd.js');
-const getUrls= require("./getUrl.js")
+const getUrls= require("./getUrl.js");
+const request=require('./httpRequest.js');
 
 
 
@@ -12,11 +13,11 @@ const mdLinksAsync =async (pathFromCli) => {
     let arrayPathsMd = filterMd.tofilterMd(convertedRoute)//para filtrar solo files.md
     let contentFiles= readContetn.readFiles(arrayPathsMd)//arreglo de contenidos string//intentar convertir a promesa
     let getUrlToAnalice=getUrls.findUrl(contentFiles)//filtra info por contenido intentar convertir a promesa
-    // let findUrls=;
-   //  let getUrlToAnalice
-    //leerarchivo y se le pasa pathsMD
-   //  console.log(readFiles)
-     return getUrlToAnalice
+    let httpRequest=request.htttpRequest(getUrlToAnalice)
+    .then(data=>data)
+    .catch();
+   
+     return httpRequest
 
 
 }else{
