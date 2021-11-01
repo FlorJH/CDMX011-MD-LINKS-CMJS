@@ -5,7 +5,12 @@ const figlet = require('figlet') ;
 const startMdLinks=require('./libs/mdLinks.js')
 
 
-const pathFromCLi=process.argv[2]
+const pathFromCLi=process.argv[2];
+const command={
+  comando1:process.argv[3],
+  comando2:process.argv[4]
+}
+
 console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  { 
   font: 'Ghost',
   horizontalLayout: 'default',
@@ -14,7 +19,9 @@ console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  {
   whitespaceBreak : true 
 } ) ));
 
-startMdLinks.mdLinksAsync(pathFromCLi)
+
+
+startMdLinks.mdLinksAsync(pathFromCLi, command)
 .then(mdLinksData =>{
 
   
