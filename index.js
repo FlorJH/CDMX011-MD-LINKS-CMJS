@@ -6,17 +6,17 @@ const startMdLinks=require('./libs/mdLinks.js')
 
 
 const pathFromCLi=process.argv[2]
-
+console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  { 
+  font: 'Ghost',
+  horizontalLayout: 'default',
+  verticalLayout: 'default',
+  width: 100,
+  whitespaceBreak : true 
+} ) ));
 
 startMdLinks.mdLinksAsync(pathFromCLi)
 .then(mdLinksData =>{
-  console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  { 
-    font: 'Ghost',
-    horizontalLayout: 'default',
-    verticalLayout: 'default',
-    width: 100,
-    whitespaceBreak : true 
-  } ) ));
+
   
   console.log(mdLinksData)
 } )
