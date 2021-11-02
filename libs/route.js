@@ -1,9 +1,9 @@
-const path=require('path');
+const path = require('path');
 
 // let rute;
- const absolutePath=(pathFromCli)=>{
-     
-        return path.isAbsolute(pathFromCli)  ?  pathFromCli : path.resolve(pathFromCli);
+const absolutePath = (pathFromCli) => {
+
+        return path.isAbsolute(pathFromCli) ? pathFromCli : path.resolve(pathFromCli);
 }
 
-exports.absolutePath= absolutePath;
+exports.absolutePath = absolutePath;

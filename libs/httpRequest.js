@@ -11,8 +11,8 @@ const htttpRequest =async (objectUrls) => {//retornara una promesa
                 objectToAnalice.StatusText=response.statusText;
                 return objectToAnalice
             })
-            .catch((error)=>{
-                console.log(error)
+            .catch(()=>{
+                // console.log(error)
                 objectToAnalice.Status=400;
                 objectToAnalice.StatusText='Not found';
                 

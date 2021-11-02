@@ -34,22 +34,6 @@ const findUrl= (contentFiles)=>{
     }
     })
 
-       
-        // getUrl.forEach(individualValues=>{
-            
-        //     if (individualValues.path !== null) {
-            
-        //     let urlObject = {};
-        //     urlObject['Title'] = individualValues.match(urlTittle).toString();
-        //     urlObject['Url'] = individualValues.match(urlPath).toString();
-        //     urlObject['Path'] = pathFile;
-        // arrayFilterUrl.push(urlObject)
-    
-        // }})
-
-
-
-
 
 return arrayFilterUrl;
 
