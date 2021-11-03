@@ -4,9 +4,10 @@ const chalk = require('chalk');
 const readFiles = (arrayPaths) => {
     if (arrayPaths.length != 0) {
         let content = [];
-        arrayPaths.map(filePath => {
+        arrayPaths.forEach(filePath => {
             const contentFile = fs.readFileSync(filePath, 'utf8')
             content.push({ contentFile, filePath })
+        
         });
         // console.log(content)
         return content

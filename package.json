@@ -15,6 +15,7 @@
     "test": "test"
   },
   "scripts": {
+    "test": "jest",
     "start": "node app"
   },
   "repository": {
@@ -27,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/Laboratoria/CDMX011-md-links/issues"
   },
-  "homepage": "https://github.com/Laboratoria/CDMX011-md-links#readme"
+  "homepage": "https://github.com/Laboratoria/CDMX011-md-links#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
 }
