@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { get } = require('http');
 
-const findUrl= (contentFiles, pathFile)=>{
+const findUrl= (contentFiles)=>{
     let urlToAnalise = [];
     let marckdownUlr = /\[(.*)\]\((https?)\:\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?\)/gi;
     let urlTittle = /\[(.*)\]/gi;//obtener title
@@ -33,22 +33,6 @@ const findUrl= (contentFiles, pathFile)=>{
             })
     }
     })
-
-       
-        // getUrl.forEach(individualValues=>{
-            
-        //     if (individualValues.path !== null) {
-            
-        //     let urlObject = {};
-        //     urlObject['Title'] = individualValues.match(urlTittle).toString();
-        //     urlObject['Url'] = individualValues.match(urlPath).toString();
-        //     urlObject['Path'] = pathFile;
-        // arrayFilterUrl.push(urlObject)
-    
-        // }})
-
-
-
 
 
 return arrayFilterUrl;

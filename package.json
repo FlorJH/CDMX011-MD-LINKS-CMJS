@@ -3,9 +3,33 @@
   "version": "0.1.0",
   "dependencies": {
     "chalk": "^4.1.2",
-    "figlet": "^1.5.2"
+    "figlet": "^1.5.2",
+    "node-fetch": "^3.0.0"
   },
-  "bin":{
-"md-links":"index.js"
+  "bin": {
+    "md-links": "index.js"
+  },
+  "description": " ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laboratoria/CDMX011-md-links.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laboratoria/CDMX011-md-links/issues"
+  },
+  "homepage": "https://github.com/Laboratoria/CDMX011-md-links#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
   }
 }
