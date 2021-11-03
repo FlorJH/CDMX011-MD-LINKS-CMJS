@@ -1,4 +1,3 @@
-const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
 
@@ -13,7 +12,7 @@ const tofilterMd = (pathFromCli) => {
   if (!pathExt) {//si es falso entonces es carpeta
 
     let content = fs.readdirSync(pathFromCli);
-
+      
     content.forEach(file => {
       if (path.extname(file) == '.md' || path.extname(file) == '.markdown') {
         filesMD.push(pathFromCli + '\\' + file);//enviar path de files a array
@@ -23,19 +22,19 @@ const tofilterMd = (pathFromCli) => {
         let carpeta = (pathFromCli + '\\' + file);
         tofilterMd(carpeta);
       }
-
+    
     })
 
   } else {//es file
 
     if (pathExt == '.md' || pathExt == '.markdown') {
-
       filesMD.push(pathFromCli);//enviar path de files a array
-
     }
   }
-
-  return filesMD
+  
+    return filesMD
+  
+  
 }
 
 

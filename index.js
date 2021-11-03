@@ -1,10 +1,11 @@
+#!/usr/bin/env node
+
 const chalk = require('chalk') ;
 const figlet = require('figlet') ;
 const startMdLinks=require('./libs/mdLinks.js')
 
 
 const pathFromCLi=process.argv[2]
-
 console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  { 
   font: 'Ghost',
   horizontalLayout: 'default',
@@ -13,13 +14,11 @@ console.log(chalk.blue(figlet . textSync ( 'Md-Links' ,  {
   whitespaceBreak : true 
 } ) ));
 
-
-
-//mdLinks
 startMdLinks.mdLinksAsync(pathFromCLi)
-.then(mdLinksData =>
-      console.log(mdLinksData))
-.catch((error=>
-  console.log(error)
-  ))
+.then(mdLinksData =>{
+
+  
+  console.log(mdLinksData)
+} )
+.catch((error=>console.log('Revise la sintaxis del comando') ))
 
